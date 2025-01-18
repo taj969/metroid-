@@ -25,8 +25,8 @@ public class PlayerDirection : MonoBehaviour
             this.transform.localScale = new Vector3(1, 1, 1);
         }
 
-        // Vertical: check if up key is held
-        bool holdingUp = Input.GetKey(KeyCode.UpArrow);
+        // Vertical: check if up key is held also added W for convenience
+        bool holdingUp = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
         if (lookingUp && !holdingUp)
         {
             lookingUp = false;
