@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 newVelocity = rigid.velocity;
         newVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Z) && IsGrounded())
         {
             newVelocity.y = jumpPower;
         }
@@ -28,4 +28,40 @@ public class PlayerMovement : MonoBehaviour
         rigid.velocity = newVelocity;
 
     }
-}
+
+
+    bool IsGrounded()
+    {
+
+        Collider col = this.GetComponentInChildren<Collider>();
+
+        Ray ray = new Ray(col.bounds.center, Vector3.down);
+
+        float radius = col.bounds.extents.x - 0.5f;
+
+        float fullDistance = col.bounds.extents.y + 0.5f;
+
+
+        if (Physics.SphereCast(ray, radius, fullDistance))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    }
