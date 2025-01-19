@@ -16,7 +16,7 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        Vector3 newVelocity = rigid.velocity;
+        Vector3 newVelocity = rigid.linearVelocity;
         
         if (Input.GetKeyDown(KeyCode.Z) || (Input.GetKeyDown(KeyCode.Space) && IsGrounded()))
         {
@@ -26,7 +26,7 @@ public class PlayerJump : MonoBehaviour
 
 
 
-        rigid.velocity = newVelocity;
+        rigid.linearVelocity = newVelocity;
 
     }
 

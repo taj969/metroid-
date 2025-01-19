@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerRun1 : MonoBehaviour
+public class PlayerRun : MonoBehaviour
 {
 
     Rigidbody rigid;
@@ -15,13 +15,13 @@ public class PlayerRun1 : MonoBehaviour
 
     void Update()
     {
-        Vector3 newVelocity = rigid.velocity;
+        Vector3 newVelocity = rigid.linearVelocity;
         newVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
 
 
 
 
-        rigid.velocity = newVelocity;
+        rigid.linearVelocity = newVelocity;
 
     }
 

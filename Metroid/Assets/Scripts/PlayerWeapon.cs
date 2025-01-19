@@ -23,7 +23,7 @@ public class PlayerWeapon : MonoBehaviour
             if (playerDirection.isLookingUp()) // Check if player is looking up
             {
                 bulletInstance.transform.position = firingPositionUpward.position;
-                bulletInstance.GetComponent<Rigidbody>().velocity = Vector3.up * firingSpeed;
+                bulletInstance.GetComponent<Rigidbody>().linearVelocity = Vector3.up * firingSpeed;
             }
             else
             {
@@ -31,11 +31,11 @@ public class PlayerWeapon : MonoBehaviour
 
                 if (playerDirection.isFacingRight()) // Determine shooting direction based on facing right
                 {
-                    bulletInstance.GetComponent<Rigidbody>().velocity = Vector3.right * firingSpeed;
+                    bulletInstance.GetComponent<Rigidbody>().linearVelocity = Vector3.right * firingSpeed;
                 }
                 else
                 {
-                    bulletInstance.GetComponent<Rigidbody>().velocity = Vector3.left * firingSpeed;
+                    bulletInstance.GetComponent<Rigidbody>().linearVelocity = Vector3.left * firingSpeed;
                 }
             }
         }

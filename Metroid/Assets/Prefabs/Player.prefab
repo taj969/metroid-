@@ -71,11 +71,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6515491407390020171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d41731e58335844b21bc6301be0b56, type: 3}
+  m_Script: {fileID: 11500000, guid: 79fd572ff0f9acb4a9169fdc520289ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpPower: 15
 --- !u!114 &7697256054837756131
 MonoBehaviour:
   m_ObjectHideFlags: 0
