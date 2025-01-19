@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class PlayerRun : MonoBehaviour
+public class PlayerRun1 : MonoBehaviour
 {
 
     Rigidbody rigid;
     public float moveSpeed = 5;
-  
+
 
     void Awake()
     {
@@ -17,7 +17,7 @@ public class PlayerRun : MonoBehaviour
     {
         Vector3 newVelocity = rigid.velocity;
         newVelocity.x = Input.GetAxis("Horizontal") * moveSpeed;
-       
+
 
 
 
@@ -27,4 +27,4 @@ public class PlayerRun : MonoBehaviour
 
 
 
- }
+}
